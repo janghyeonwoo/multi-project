@@ -1,0 +1,4 @@
+com/common/dto/domain.java
+ com.common.dto.domain
+com/common/domain/User.java
+ com.common.domain.User
