@@ -16,6 +16,7 @@ public class UserController {
 
     @GetMapping("name")
     private String getUserName(HttpServletRequest request){
+        userRepository.findAll();
         return "a";
     }
 
