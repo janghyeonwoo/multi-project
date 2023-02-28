@@ -1,7 +1,11 @@
 package com.common.domain;
 
+import lombok.Getter;
+
 import javax.persistence.*;
 
+@Getter
+@Table(name = "user2")
 @Entity
 public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,9 +17,9 @@ public class User {
     private String userName;
 
     @Column(name = "id")
-    private String id;
+    private String userId;
 
-    @Column(name = "passowrd")
+    @Column(name = "password")
     private String password;
 
 }

@@ -7,8 +7,9 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     // db
     implementation "org.springframework.boot:spring-boot-starter-data-jdbc"
-    // db
     runtimeOnly "mysql:mysql-connector-java"
+    //security
+    implementation 'org.springframework.boot:spring-boot-starter-security'
 
 }
 
