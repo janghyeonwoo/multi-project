@@ -375,3 +375,5 @@ gradle-app.setting
 *.hproffile:/D:/smartscore/source/majesty/.gitignore
 
 # End of https://www.toptal.com/developers/gitignore/api/gradle,intellij,intellij+iml,intellij+all,java,visualstudiocode,windows,macos
+server-api/src/test/
+server-core/src/test/
