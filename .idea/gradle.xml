@@ -10,7 +10,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/server-api" />
-            <option value="$PROJECT_DIR$/server-common" />
+            <option value="$PROJECT_DIR$/server-core" />
           </set>
         </option>
         <option name="useQualifiedModuleNames" value="true" />

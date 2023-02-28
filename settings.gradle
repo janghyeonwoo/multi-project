@@ -1,4 +1,4 @@
 rootProject.name = 'multi-project'
 include 'server-api'
-include 'server-common'
+include 'server-core'
 

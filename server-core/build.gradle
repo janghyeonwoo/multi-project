@@ -1,0 +1,22 @@
+bootJar { enabled = false } //라이브러리 형태로 사용 할 것 이기 때문에 실행가능한JAR(MAIN 메소드가 존재하는) 가 필요없다
+jar { enabled = true } //라이브러리 혙태로 사용할 것 이기 때문에 JAR로 구성
+
+dependencies {
+
+}
+
+
+//plugins {
+//    id 'java'
+//}
+//
+//group 'org.example'
+//version '1.0-SNAPSHOT'
+//
+//repositories {
+//    mavenCentral()
+//}
+//
+//dependencies {
+//    testCompile group: 'junit', name: 'junit', version: '4.12'
+//}
