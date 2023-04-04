@@ -31,8 +31,8 @@ public class JwtTokenUtll {
     private final long expireTime;
 
     public JwtTokenUtll(@Value("${jwt.secret}") String secretKey ,@Value("${jwt.expireTime}") String expireTime) {
-//        byte [] keyByte = Decoders.BASE64.decode(secretKey);
-        this.jwtSecretKey = Keys.hmacShaKeyFor(secretKey.getBytes());
+        byte [] keyByte = Decoders.BASE64.decode(secretKey);
+        this.jwtSecretKey = Keys.hmacShaKeyFor(keyByte);
         this.expireTime = Long.parseLong(expireTime);
     }
 
