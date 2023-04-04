@@ -17,8 +17,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class CustomLoginFilter extends AbstractAuthenticationProcessingFilter {
-    private boolean postOnly = true;
+public class CustomLoginFilter extends AbstractAuthenticationProcessingFilter {    private boolean postOnly = true;
+
     private static final AntPathRequestMatcher DEFAULT_ANT_PATH_REQUEST_MATCHER = new AntPathRequestMatcher("/psn/login", "POST");
 
     public CustomLoginFilter(AuthenticationManager authenticationManager, AuthenticationSuccessHandler successHandler) {

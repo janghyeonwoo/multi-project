@@ -1,23 +1,31 @@
 package com.muli.controller;
 
-import com.common.respository.UserRepository;
+import com.muli.dto.MemberLoginRequestDto;
+import com.muli.dto.TokenInfo;
+import com.muli.service.CustomMemberService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-import javax.servlet.http.HttpServletRequest;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.web.bind.annotation.*;
 
 @RequestMapping("/user")
 @RequiredArgsConstructor
 @RestController
 public class UserController {
-    private final UserRepository userRepository;
+    private final CustomMemberService customMemberService;
+    private final BCryptPasswordEncoder passwordEncoder;
 
-    @GetMapping("name")
-    private String getUserName(HttpServletRequest request){
-        userRepository.findAll();
-        return "a";
+    @PostMapping("/login")
+    private TokenInfo login(@RequestBody MemberLoginRequestDto memberLoginRequestDto){
+        String id = memberLoginRequestDto.getId();
+        String password = memberLoginRequestDto.getPassword();
+        return customMemberService.login(id,password);
     }
+
+    @GetMapping("/password")
+    private String getEncoderPassword(String val){
+        return passwordEncoder.encode(val);
+    }
+
 
 }

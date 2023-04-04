@@ -45,5 +45,8 @@ logging:
 
 
 
+jwt:
+  secret: VlwEyVBsYt9V7zq57TejMnVUyzblYcfPQye08f7MGVA9XkHa
+  expireTime: 86400000
 
 

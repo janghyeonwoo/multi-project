@@ -2,6 +2,12 @@ bootJar { enabled = false } //라이브러리 형태로 사용 할 것 이기 �
 jar { enabled = true } //라이브러리 혙태로 사용할 것 이기 때문에 JAR로 구성
 
 dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    // db
+    implementation "org.springframework.boot:spring-boot-starter-data-jdbc"
+    runtimeOnly "mysql:mysql-connector-java"
+    //security
+    implementation 'org.springframework.boot:spring-boot-starter-security'
 
 }
 
