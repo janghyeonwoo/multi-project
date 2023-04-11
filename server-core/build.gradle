@@ -3,12 +3,11 @@ jar { enabled = true } //라이브러리 혙태로 사용할 것 이기 때문�
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    //Jpa 설정
+    implementation "org.springframework.boot:spring-boot-starter-data-jpa"
     // db
     implementation "org.springframework.boot:spring-boot-starter-data-jdbc"
     runtimeOnly "mysql:mysql-connector-java"
-    //security
-    implementation 'org.springframework.boot:spring-boot-starter-security'
-
 }
 
 

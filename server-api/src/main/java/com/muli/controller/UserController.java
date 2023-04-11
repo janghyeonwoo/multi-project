@@ -27,5 +27,10 @@ public class UserController {
         return passwordEncoder.encode(val);
     }
 
+    @GetMapping("/circuit_test")
+    private String circuitTest(){
+        return "OK!!";
+    }
+
 
 }
